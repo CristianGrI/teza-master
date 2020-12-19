@@ -1,3 +1,6 @@
+stage('Checkout code') {
+    git 'https://github.com/CristianGrI/teza-master.git'
+}
 stage('Build') {
     powershell ' .\\Scripts\\Build.ps1'
 }
