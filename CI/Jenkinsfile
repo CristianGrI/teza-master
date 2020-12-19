@@ -2,13 +2,19 @@ pipeline {
      agent any
      stages {
          stage('Build') {
-            powershell ' .\\Scripts\\Build.ps1'
+             steps {
+                powershell ' .\\Scripts\\Build.ps1'
+             }
         }
         stage('Tests') {
-            powershell ' .\\Scripts\\Tests.ps1'
+             steps {
+                powershell ' .\\Scripts\\Tests.ps1'
+             }
         }
         stage('Publish') {
-            powershell ' .\\Scripts\\Publish.ps1'
+             steps {
+                powershell ' .\\Scripts\\Publish.ps1'
+             }
         }
      }
 }
